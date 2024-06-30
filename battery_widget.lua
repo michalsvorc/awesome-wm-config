@@ -3,15 +3,15 @@ if not status_ok then
   error("Battery widget not found")
 end
 
-local battery_widget = plugin {
+local battery_widget = plugin({
   ac = "AC",
   adapter = "BAT0",
   ac_prefix = "A:",
   battery_prefix = "B:",
   percent_colors = {
-    { 10, "red"   },
-    { 50, "orange"},
-    {999, "grey" },
+    { 10, "red" },
+    { 50, "orange" },
+    { 999, "grey" },
   },
   listen = true,
   timeout = 10,
@@ -21,7 +21,7 @@ local battery_widget = plugin {
   alert_threshold = 10,
   alert_timeout = 0,
   alert_title = "Low battery!",
-  alert_text = "${AC_BAT}${time_est}"
-}
+  alert_text = "${AC_BAT}${time_est}",
+})
 
 return battery_widget
