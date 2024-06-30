@@ -67,6 +67,8 @@ editor_cmd = terminal .. " -e " .. editor
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = require("keymap").modkey
 
+local layout_centered = require("layouts.centered")
+
 -- Table of layouts to cover with awful.layout.inc, order matters.
 -- https://awesomewm.org/apidoc/libraries/awful.layout.html
 awful.layout.layouts = {
@@ -75,6 +77,8 @@ awful.layout.layouts = {
   awful.layout.suit.tile.left,
   awful.layout.suit.tile.bottom,
   awful.layout.suit.tile.top,
+  awful.layout.suit.floating,
+  layout_centered,
   awful.layout.suit.max.fullscreen,
 }
 -- }}}
