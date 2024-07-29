@@ -18,7 +18,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
-local battery_widget = require("battery_widget")
+-- local battery_widget = require("battery_widget")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -272,8 +272,8 @@ awful.screen.connect_for_each_screen(function(s)
         -- separator,
         mytextclock,
         separator,
-        battery_widget,
-        separator,
+        -- battery_widget,
+        -- separator,
         {
           wibox.widget.systray(),
           margins = 5,
